@@ -1,3 +1,0 @@
-2025-11-23
-Created repository. Added the gitignore file. Created the app_server file as the 
-base starting point.
