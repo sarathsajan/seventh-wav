@@ -9,7 +9,7 @@ def hello_world():
     """
     The root route handler. Returns a simple "Hello, World!" message.
     """
-    return "<p>Hello, World!</p>"
+    return "<p>Hello, World!</p> <br> <a href='/api/status'>Check Status</a>"
 
 @app.route("/api/status")
 def status_check():
