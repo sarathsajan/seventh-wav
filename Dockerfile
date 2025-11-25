@@ -20,5 +20,4 @@ EXPOSE 8080
 # Use Gunicorn to serve the Flask app ('app_server:app') 
 # and bind it to 0.0.0.0 using the $PORT environment variable provided by Cloud Run.
 # The 'exec' ensures signals are handled correctly by the process.
-
 CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 app_server:app

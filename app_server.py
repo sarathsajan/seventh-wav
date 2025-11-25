@@ -7,15 +7,27 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     """
-    The root route handler. Returns a simple "Hello, World!" message.
+    Root route handler.
+
+    Returns a simple HTML greeting and a link to the status endpoint.
+
+    Returns:
+        str: HTML string containing a greeting and a link to '/api/status'.
     """
     return "<p>Hello, World!</p> <br> <a href='/api/status'>Check Status</a>"
 
 @app.route("/api/status")
 def status_check():
     """
-    A new route to provide a structured status check (common for APIs).
-    It returns a JSON object with the current time and status.
+    Provide a structured status report for the API.
+
+    Returns a JSON response with the current service status and server timestamp.
+
+    Returns:
+        flask.wrappers.Response: A Flask JSON response containing:
+            - status (str): Operational status, e.g. "ok".
+            - service (str): Service identifier, e.g. "flask-app-service".
+            - timestamp (str): Current server time formatted as "%Y-%m-%d %H:%M:%S".
     """
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
