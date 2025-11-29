@@ -8,6 +8,16 @@ accessed via an API call provided by the MVSEP website (mvsep.com)</p>
 <p>White paper link - https://arxiv.org/abs/2309.02612</p>
 <p>Below are some samples I generated using this refined version of BS-RoFormer model.</p>
 
+{% for audio in audio_list %}
+    <div>
+        <p>{{ audio.title }}</p>
+        <audio controls><source src="{{audio.signed_url}}" type="audio/mpeg">Your browser does not support the audio tag.</audio>
+    </div>
+
+
+
+
+
 <br>Song name : Pichakappoomkaavukalkkum
 <br>Release year : 1990
 <br>YT url : https://www.youtube.com/watch?v=qOtx_6KUnso
@@ -48,10 +58,3 @@ accessed via an API call provided by the MVSEP website (mvsep.com)</p>
 <br>Vocal only: <audio controls><source src="/static/audios/Meredholna_vocal.mp3" type="audio/mpeg">Your browser does not support the audio tag.</audio>
 <br>Instr only: <audio controls><source src="/static/audios/Meredholna_instr.mp3" type="audio/mpeg">Your browser does not support the audio tag.</audio>
 <br>
-<br>Song name : Tere bina
-<br>Release year : 2007
-<br>YT url : https://www.youtube.com/watch?v=9JDSGhhiOwI
-<br>Reason of choice : just for the arr magic, hindi
-<br>Full song : <audio controls><source src="/static/audios/Terebina_original.mp3" type="audio/mpeg">Your browser does not support the audio tag.</audio>
-<br>Vocal only: <audio controls><source src="/static/audios/Terebina_vocal.mp3" type="audio/mpeg">Your browser does not support the audio tag.</audio>
-<br>Instr only: <audio controls><source src="/static/audios/Terebina_instr.mp3" type="audio/mpeg">Your browser does not support the audio tag.</audio>
