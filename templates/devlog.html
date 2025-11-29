@@ -1,0 +1,29 @@
+2025-11-29
+I am planning on adding a /techstack route that will show all the major langages, libraries, frameworks, tools and
+services that was used to build this webapp.
+
+2025-11-28
+I had previously built a song guessing game in 2019 called ZeroSong. This was a project to learn web development.
+Malayalam song quiz webapp made using Python and Flask framework. In this game you will listen to the intro of a song
+and you have to guess which Malayalam song it is. The song will stop playing just before the vocals come in. You can
+read all about that in its github repo.
+Github repo link -  https://github.com/sarathsajan/zerosong/blob/master/templates/about.html
+
+Now the problem with such a game is legal and technical. Using a copyrighted song without permission is not legal. So
+lets keep that aside and make a it a future me's problem. We will focus on the main technical problem. Since this is a
+song guessing game we cannot play the song directly. We need to modify the song audio file in such a way that so that
+the user can have some form of challenge to identify the song. So i thought of manual downloading song from youtube and
+trimming down the audio such that the audio finishes once it reaches the vocals. This was enjoyable for the first few
+songs then it felt repetitive and time consuming. So I stopped the project with 50ish something songs in 2019.
+
+I always wanted to improve upon this project later with more automations and recently I stumbled upon Demucs
+(https://github.com/facebookresearch/demucs) a deep learning model from facebookreserach to separate a given song/audio 
+into multiple stems (stems = vocal, piano, violin, drums, flute and more instruments). This really blew my mind of how
+accurate it was at identify and splitting up the song even its is default state. So I started going deep into this
+rabbit hole and found a website (mvsep.com) that would allow you to upload an audio file and they will use the refined
+Demucs model to separate the song into multiple stems. This refined mode was even better. But the quality was nothing
+compared to another refined model that I came across on the same site: BS-RoFormer
+
+BS-RoFormer stands for Band-Split Rotary Position Embedding Transformer built by ByteDance AI Labs. You can read the 
+white paper here (https://arxiv.org/abs/2309.02612). As of 2025 this is the state-of-the-art model for audio separation
+and mixing. Time to use this high-tech lightsaber to cut my humble pie.
