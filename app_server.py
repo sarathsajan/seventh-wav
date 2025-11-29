@@ -10,7 +10,10 @@ def hello_world():
 def devlog():
     return render_template('devlog.html')
 
-
 @app.route("/techstack")
 def techstack():
+    return render_template('techstack.html')
+
+@app.route("/techstack/bsroformer")
+def techstack_individual():
     return render_template('techstack_bsroformer.html')
