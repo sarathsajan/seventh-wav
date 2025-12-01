@@ -4,16 +4,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template('home.html')
+    return render_template('page_layouts/home.html')
 
 @app.route("/devlog")
 def devlog():
-    return render_template('devlog.html')
+    return render_template('page_layouts/devlog.html')
 
 @app.route("/techstack")
 def techstack():
-    return render_template('techstack.html')
+    return render_template('page_layouts/techstack.html')
 
 @app.route("/techstack/bsroformer")
 def techstack_individual():
-    return render_template('techstack_bsroformer.html')
+    return render_template('page_layouts/techstack_bsroformer.html')
