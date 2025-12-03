@@ -17,3 +17,7 @@ def techstack():
 @app.route("/techstack/bsroformer")
 def techstack_individual():
     return render_template('page_layouts/techstack_bsroformer.html')
+
+@app.route("/ref_layout")
+def ref_layout():
+    return render_template('reference_layout.html')
